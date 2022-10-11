@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const client = new MongoClient(process.env.uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-//uri = "mongodb+srv://hunter_mcgriff:HGbaseball6!@quebec.qjyhcwc.mongodb.net/
+
 
 console.log(process.env.uri);
 
@@ -24,11 +24,6 @@ app.get('/', async function (req, res) {
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 
-    // posts = await client.db("myFirstDatabase").collection("posts").findOne();
-
-    // console.log(posts); 
-    
-    // return posts; 
 
     const collection = client.db("myFirstDatabse").collection("posts");
     
