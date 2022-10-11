@@ -4,7 +4,7 @@ const path = require('node:path')
 const bodyParser = require('body-parser')
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
 const app = express()
