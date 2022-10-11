@@ -4,8 +4,10 @@ const path = require('node:path')
 const bodyParser = require('body-parser')
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const client = new MongoClient(process.env.uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+//uri = "mongodb+srv://hunter_mcgriff:HGbaseball6!@quebec.qjyhcwc.mongodb.net/
 
+console.log(process.env.uri);
 
 const app = express()
 
@@ -17,13 +19,26 @@ app.get('/', async function (req, res) {
 
     client.connect;
 
-    const collection = client.db("myFirstDatabase").collection("posts");
+    databasesList = await client.db().admin().listDatabases();
+ 
+    console.log("Databases:");
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+
+    // posts = await client.db("myFirstDatabase").collection("posts").findOne();
+
+    // console.log(posts); 
+    
+    // return posts; 
+
+    const collection = client.db("myFirstDatabse").collection("posts");
+    
     console.log('connected!');
        
-        const result = await collection.findOne(); //.toArray();
-         console.log(result);
+    const result = await collection.findOne(); //.toArray();
+    
+    console.log(result);
             
-            res.send(result.title);
+    res.send(result);
           
 });
 
