@@ -1,25 +1,27 @@
 {
-    "dependencies": {
-      "dotenv": "^16.0.3",
-      "express": "^4.18.1",
-      "mongodb": "^4.10.0"
-    },
-    "name": "dev-lab-quebec",
-    "description": "",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/hunter-mcgriff/dev-lab-quebec.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/hunter-mcgriff/dev-lab-quebec/issues"
-    },
-    "homepage": "https://github.com/hunter-mcgriff/dev-lab-quebec#readme"
-  }
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^4.10.0"
+  },
+  "name": "probable-meme-quebec",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunter-mcgriff/quebec-lab-486.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunter-mcgriff/quebec-lab-486/issues"
+  },
+  "homepage": "https://github.com/hunter-mcgriff/quebec-lab-486#readme"
+}
