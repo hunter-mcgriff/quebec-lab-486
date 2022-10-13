@@ -15,6 +15,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs');
 
+let pName, pNumber, pPosition, players = '';
+
 app.get('/', async function (req, res) {
 
     client.connect;
@@ -33,7 +35,16 @@ app.get('/', async function (req, res) {
     
     console.log(result);
             
-    res.send(result);
+    //res.send(result);
+
+    res.render('index' ,{
+      pName: result.name, 
+      pPosition: result.position,
+      pNumber: result.number, 
+      players: players
+
+
+    })
           
 });
 
