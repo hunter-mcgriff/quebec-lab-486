@@ -21,7 +21,7 @@
         <span>Position: <%= players[i].position %></span><br>
         <span>Number: <%= players[i].number %></span><br>
           <form method="post" action="/deletePlayer/<%= players[i]._id %>">
-          <input type="submit" onClick="return confirm('Confirm Deletion`?')" />
+          <input type="submit" value="delete">
       </form>
         <div> <br> </div>
     </li>
