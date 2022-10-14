@@ -17,35 +17,40 @@ app.set('view engine', 'ejs');
 
 let pName, pNumber, pPosition, players = '';
 
-app.get('/', async function (req, res) {
+async function cxnDB(){
 
-    client.connect;
+  try{
+    client.connect; 
+    const collection = client.db("myFirstDatabase").collection("posts");
+    const result = await collection.find().toArray();
+      
+    // console.log("cxnDB result: ", result);
+    return result; 
 
-    databasesList = await client.db().admin().listDatabases();
- 
-    console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-
-
-    const collection = client.db("myFirstDatabse").collection("posts");
-    
-    console.log('connected!');
-       
-    const result = await collection.findOne(); //.toArray();
-    
-    console.log(result);
-            
-    //res.send(result);
-
-    res.render('index' ,{
-      pName: result.name, 
-      pPosition: result.position,
-      pNumber: result.number, 
-      players: players
+  }
+  catch(e){
+      console.log(e)
+  }
+  finally{
+    client.close; 
+  }
 
 
-    })
-    
+}
+
+app.get('/', async (req, res) => {
+
+  let result = await cxnDB().catch(console.error); 
+
+  // console.log("get/: ", result);
+
+  res.render('index', { 
+    players : result
+  })
+})
+
+
+
      
 app.post('/players', async (req, res) => {
 
