@@ -72,7 +72,7 @@ app.post('/players', async (req, res) => {
 app.post('/deletePlayers/:id', async (req, res) => {
 
   try {
-    console.log("req.parms.id: ", req.params.id) 
+    console.log("req.params.id: ", req.params.id) 
     
     client.connect; 
     const collection = client.db("myFirstDatabase").collection("posts");
@@ -99,11 +99,11 @@ app.listen(PORT, () => {
 
     
           
-});
+//});
     
 
 
 
 
-app.listen(process.env.PORT || 3000,
-  () => console.log(`server is running on port: ${process.env.PORT}` ));
+//app.listen(process.env.PORT || 3000,
+  //() => console.log(`server is running on port: ${process.env.PORT}` ));
