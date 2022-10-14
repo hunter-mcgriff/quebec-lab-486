@@ -15,16 +15,12 @@
 
 
   <ul class = "players">
-    <% for(var i = 0; i < players.length; i++) {%>
-    <li class = "players">
-        <span>Name: <%= players[i].pName %></span><br>
-        <span>Position: <%= players[i].pPosition %></span><br>
-        <span>Number: <%= players[i].pNumber %></span><br>
-          <form method="POST" action="/deletePlayer/<%= players[i]._id %>">
-          <input type="submit" value="delete">
+    <% for(var i=0; i< players.length; i++) { %>
+      <form method="POST" action="/deletePlayers/<%=players[i]._id %>" style="display: inline-block">
+        <%= players[i].pName %> ( <%= players[i].pPosition %>) (<%= players[i].pNumber %>)
+        <input type="submit" value="delete">
       </form>
-        <div> <br> </div>
-    </li>
+      <br>
     <% } %>
   </ul>
   
