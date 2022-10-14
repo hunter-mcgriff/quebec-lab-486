@@ -9,16 +9,9 @@
 
   <br>
 
-<h1> <%= pName %> </h1>
-<h1> <%= pPosition %></h1>
-<h1> <%= pNumber %></h1>
-
-  <form action="/players" method="POST">
-    <input type="text" placeholder="name" name="name"> <br>
-    <input type="text" placeholder="position" name="position"> <br>
-    <input type="number" placeholder="number" name="number"> <br>
-    <button type="submit">Submit</button>
-  </form>
+<h3> <%= pName %> </h3>
+<h3> <%= pPosition %></h3>
+<h3> <%= pNumber %></h3>
 
 
   <ul class = "players">
@@ -27,17 +20,21 @@
         <span>Name: <%= players[i].name %></span><br>
         <span>Position: <%= players[i].position %></span><br>
         <span>Number: <%= players[i].number %></span><br>
-        <!-- this will be for delete -->
-        <!-- <button class = "delete" id = <%=players[i]._id%>> delete </button> -->
-        <!-- <form method="post" action="/deletePlayer/<%= players[i].name %>/<%= players[i]._id %>"> -->
           <form method="post" action="/deletePlayer/<%= players[i]._id %>">
           <input type="submit" onClick="return confirm('Confirm Deletion`?')" />
-          <!-- <input type="hidden" name="_method" value="DELETE" /> -->
       </form>
         <div> <br> </div>
     </li>
     <% } %>
   </ul>
+  
+    <form action="/players" method="POST">
+    <input type="text" placeholder="name" name="name"> <br>
+    <input type="text" placeholder="position" name="position"> <br>
+    <input type="number" placeholder="number" name="number"> <br>
+    <button type="submit">Submit</button>
+  </form>
+  
   <a href="https://github.com/hunter-mcgriff/quebec-lab-486">GitHub Repo</a><br>
   <a href="https://hunter-mcgriff.github.io/quebec-lab-486/">GitHub Pages</a><br>
   <a href="https://hunter-mcgriff.github.io/quebec-lab-486/">Heroku App</a>
