@@ -7,18 +7,18 @@
 <body>
   <h1> Player Info </h1>
 
-  <form action="/players" method="POST">
-    <input type="text" placeholder="name" name="name"> <br>
-    <input type="text" placeholder="position" name="position"> <br>
-    <input type="number" placeholder="number" name="number"> <br>
-    <button type="submit">Submit</button>
-  </form>
-
   <br>
 
 <h1> <%= pName %> </h1>
 <h1> <%= pPosition %></h1>
 <h1> <%= pNumber %></h1>
+
+  <form method="POST" action"/players">
+    <input type="text" placeholder="name" name="name"> <br>
+    <input type="text" placeholder="position" name="position"> <br>
+    <input type="number" placeholder="number" name="number"> <br>
+    <button type="submit">Submit</button>
+  </form>
 
 
   <ul class = "players">
