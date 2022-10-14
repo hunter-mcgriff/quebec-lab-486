@@ -46,9 +46,9 @@ app.get('/', async function (req, res) {
 
     })
     
- app.post('/players', (req, res) {
+ app.post('/players', (req, res) => {
       playersCollection.insertOne(req.body)
-          .then(result {
+          .then(result => {
             res.redirect('/')
            })
           .catch(error => console.error(error))
