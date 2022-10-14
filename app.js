@@ -47,7 +47,7 @@ app.get('/', async function (req, res) {
     })
     
      
- app.post('/players', (req, res) => {
+ app.post('/players', async (req, res) => {
  console.log(req.body); 
     client.connect;
     const collection = client.db("myFirstDatabse").collection("posts");
