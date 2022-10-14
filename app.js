@@ -46,6 +46,19 @@ app.get('/', async function (req, res) {
 
     })
     
+     
+ app.post('/players', (req, res) => {
+ console.log(req.body); 
+    client.connect;
+    const collection = client.db("myFirstDatabse").collection("posts");
+    collection.insertOne(req.body)
+    .then(result => {
+      res.redirect('/')
+     })
+    .catch(error => console.error(error))
+})
+
+    
           
 });
     
