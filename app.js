@@ -33,6 +33,8 @@ let pName, pNumber, pPosition, players = '';
     client.close; 
   }
 
+}
+
 app.get('/', async function (req, res) {
 
   client.connect;
