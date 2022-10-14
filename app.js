@@ -17,23 +17,6 @@ app.set('view engine', 'ejs');
 
 let pName, pNumber, pPosition, players = '';
 
-    try{
-      client.connect; 
-      const collection = client.db("myFirstDatabase").collection("posts");
-      const result = await collection.find().toArray();
-      
-    // console.log("cxnDB result: ", result);
-      return result; 
-
-  }
-  catch(e){
-      console.log(e)
-  }
-  finally{
-    client.close; 
-  }
-
-}
 
 app.get('/', async function (req, res) {
 
