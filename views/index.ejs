@@ -20,7 +20,7 @@
         <span>Name: <%= players[i].name %></span><br>
         <span>Position: <%= players[i].position %></span><br>
         <span>Number: <%= players[i].number %></span><br>
-          <form method="post" action="/deletePlayer/<%= players[i]._id %>">
+          <form method="POST" action="/deletePlayer/<%= players[i]._id %>">
           <input type="submit" value="delete">
       </form>
         <div> <br> </div>
