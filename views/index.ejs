@@ -17,9 +17,9 @@
   <ul class = "players">
     <% for(var i = 0; i < players.length; i++) {%>
     <li class = "player">
-        <span>Name: <%= players[i].name %></span><br>
-        <span>Position: <%= players[i].position %></span><br>
-        <span>Number: <%= players[i].number %></span><br>
+        <span>Name: <%= players[i].pName %></span><br>
+        <span>Position: <%= players[i].pPosition %></span><br>
+        <span>Number: <%= players[i].pNumber %></span><br>
           <form method="POST" action="/deletePlayer/<%= players[i]._id %>">
           <input type="submit" value="delete">
       </form>
