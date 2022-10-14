@@ -47,15 +47,23 @@ app.get('/', async function (req, res) {
     })
     
      
- app.post('/players',  (req, res) => {
- console.log(req.body); 
-    client.connect;
-    const collection = client.db("myFirstDatabse").collection("posts");
-    collection.insertOne(req.body)
-    .then(result => {
-      res.redirect('/')
-     })
-    .catch(error => console.error(error))
+app.post('/players', async (req, res) => {
+
+  try {
+    // console.log("req.body: ", req.body) 
+    client.connect; 
+    const collection = client.db("myFirstDatabase").collection("posts");
+    await collection.insertOne(req.body);
+      
+    res.redirect('/');
+  }
+  catch(e){
+    console.log(error)
+  }
+  finally{
+   // client.close()
+  }
+
 })
 
     
