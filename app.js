@@ -93,17 +93,17 @@ app.post('/deletePlayers/:id', async (req, res) => {
 
 })
 
-app.listen(PORT, () => {
-  console.log(`Server is running & listening on port ${PORT}`);
-});
+//app.listen(PORT, () => {
+  //console.log(`Server is running & listening on port ${PORT}`);
+//});
 
     
           
-//});
+});
     
 
 
 
 
-//app.listen(process.env.PORT || 3000,
-  //() => console.log(`server is running on port: ${process.env.PORT}` ));
+app.listen(process.env.PORT || 3000,
+  () => console.log(`server is running on port: ${process.env.PORT}` ));
