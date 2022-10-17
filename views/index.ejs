@@ -9,15 +9,13 @@
 
   <br>
 
-<!--<h3> <%= player_name %> </h3>
-<h3> <%= position %></h3>
-<h3> <%= number %></h3>-->
+
 
 
   <ul class = "players">
     <% for(var i=0; i< players.length; i++) { %>
       <form method="POST" action="/deletePlayers/<%= players[i]._id %>" style="display: inline-block">
-        <%= players[i].player_name %> ( <%= players[i].position %>) (<%= players[i].number %>)
+        <%= players[i].name %> ( <%= players[i].positon %>) (<%= players[i].number %>)
         <input type="submit" value="delete">
       </form>
       <br/>
