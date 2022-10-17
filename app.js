@@ -16,9 +16,9 @@ app.set('view engine', 'ejs');
 
 app.get('/', async function (req, res) {
     client.connect;
-    //databasesList = await client.db().admin().listDatabases();
-    //console.log("Databases:");
-    //databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+    databasesList = await client.db().admin().listDatabases();
+    console.log("Databases:");
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 
     const collection = client.db("myFirstDatabse").collection("posts");
     console.log('connected!');
