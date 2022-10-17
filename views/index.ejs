@@ -17,7 +17,7 @@
   <ul class = "players">
     <% for(var i=0; i< players.length; i++) { %>
       <form method="POST" action="/deletePlayers/<%= players[i]._id %>" style="display: inline-block">
-        <%= players[i].pName %> ( <%= players[i].pPosition %>) (<%= players[i].pNumber %>)
+        <%= players[i].player_name %> ( <%= players[i].position %>) (<%= players[i].number %>)
         <input type="submit" value="delete">
       </form>
       <br/>
@@ -25,14 +25,14 @@
   </ul>
   
     <form action="/players" method="POST">
-        <label for="pName">Player</label>
-            <input name="pName" value="Dansby Swanson">
+        <label for="player_name">Player</label>
+            <input name="player_name" value="Dansby Swanson">
         <br>
-        <label for="pPosition">position</label>
-            <input name="pPositon" value="SS">
+        <label for="position">position</label>
+            <input name="positon" value="SS">
         <br>
-        <label for="pNumber">number</label>
-            <input name="pNumber" value="7">
+        <label for="number">number</label>
+            <input name="number" value="7">
         <br>
     <input type="submit" value="submit" />
   </form>
