@@ -41,6 +41,30 @@ app.get('/', async function (req, res) {
      })
     .catch(error => console.error(error))
 })
+    
+app.post('/deletePlayers/:id', async (req, res) => {
+
+  try {
+    console.log("req.parms.id: ", req.params.id) 
+    
+    client.connect; 
+    const collection = client.db("myFirstDatabase").collection("posts");
+    let result = await collection.findOneAndDelete( 
+      {
+        "_id": ObjectId(req.params.id)
+      }
+    )
+    .then(result => {
+      console.log(result); 
+      res.redirect('/');
+    })
+    .catch(error => console.error(error))
+  }
+  finally{
+    //client.close()
+  }
+
+})
 
 
           
