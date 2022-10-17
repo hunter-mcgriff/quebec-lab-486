@@ -13,9 +13,9 @@
 
 
 <h3> players</h3> 
- <% for(var i=0; i< ObjectId.length; i++) { %>
-  <form method="POST" action="/deletePlayers/<%= ObjectId[i]._id %>" style="display: inline-block">
-    <%= ObjectId[i].player_name %> ( <%= ObjectId[i].positon %>) (<%= ObjectId[i].number %>)
+ <% for(var i=0; i< players.length; i++) { %>
+  <form method="POST" action="/deletePlayers/<%= players[i]._id %>" style="display: inline-block">
+    <%= players[i].name %> ( <%= players[i].positon %>) (<%= players[i].number %>)
     <input type="submit" value="delete">
   </form>
   <br/> 
