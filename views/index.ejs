@@ -12,7 +12,7 @@
 
 
 
-  <ul class = "players">
+<!--  <ul class = "players"> -->
     <% for(var i=0; i< players.length; i++) { %>
       <form method="POST" action="/deletePlayers/<%= players[i]._id %>" style="display: inline-block">
         <%= players[i].name %> ( <%= players[i].positon %>) (<%= players[i].number %>)
@@ -20,7 +20,7 @@
       </form>
       <br/>
     <% } %>
-  </ul>
+ <!-- </ul>-->
   
     <form action="/players" method="POST">
         <label for="player_name">Player</label>
