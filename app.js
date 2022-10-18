@@ -36,7 +36,7 @@ async function cxnDB(){
 
 
 
-app.get('/', async function (req, res) => {
+app.get('/', async function (req, res) {
     client.connect;
     databasesList = await client.db().admin().listDatabases();
     console.log("Databases:");
