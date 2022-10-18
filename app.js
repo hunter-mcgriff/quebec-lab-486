@@ -57,7 +57,6 @@ app.get('/', async function (req, res) => {
       
       players : result    
     })
-})
     
  app.post('/players', (req, res) => {
  console.log(req.body); 
