@@ -53,10 +53,7 @@ app.get('/', async function (req, res) => {
             
     //res.send(result);
 
-    res.render('index', { 
-      
-      players : result    
-    })
+    res.render('index', { players : result    })
     
  app.post('/players', (req, res) => {
  console.log(req.body); 
