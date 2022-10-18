@@ -9,8 +9,6 @@ const client = new MongoClient(process.env.uri, { useNewUrlParser: true, useUnif
 
 console.log(process.env.uri);
 
-const app = express()
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs');
