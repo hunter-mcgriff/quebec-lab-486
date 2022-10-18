@@ -13,26 +13,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs');
 
-async function cxnDB(){
-
-  try{
-    client.connect; 
-    const collection = client.db("chillAppz").collection("drinkz");
-    const result = await collection.find().toArray();
-      
-    // console.log("cxnDB result: ", result);
-    return result; 
-
-  }
-  catch(e){
-      console.log(e)
-  }
-  finally{
-    client.close; 
-  }
-
-
-}
 
 
 
