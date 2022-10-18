@@ -36,7 +36,7 @@ async function cxnDB(){
 
 
 
-app.get('/', async function (req, res){
+app.get('/', async function (req, res) {
     client.connect;
     databasesList = await client.db().admin().listDatabases();
     console.log("Databases:");
@@ -51,7 +51,7 @@ app.get('/', async function (req, res){
             
     //res.send(result);
 
-    res.render('index', { players : result    })
+    res.render('index' ,{ players : result    })
     
  app.post('/players', (req, res) => {
  console.log(req.body); 
